@@ -24,25 +24,24 @@ RUN mkdir -p ~/.steam && ln -s ~/linux32 ~/.steam/sdk32
 
 WORKDIR /home/steam/cs16
 
+# Make dirs
+RUN mkdir -p cstrike/addons/metamod/dlls && mkdir -p cstrike/addons/dproto && mkdir -p cstrike/addons/amxmodx
+
+
 # Add metamod
-RUN mkdir -p cstrike/addons/metamod/dlls
 COPY --chown=steam:steam metamod_i386.so cstrike/addons/metamod/dlls/
 COPY --chown=steam:steam metamod.so cstrike/addons/metamod/dlls/
+COPY --chown=steam:steam plugins.ini cstrike/addons/metamod/plugins.ini
 
 # Add dproto
-RUN mkdir -p cstrike/addons/dproto
 COPY --chown=steam:steam dproto/bin/Linux/dproto_i386.so cstrike/addons/dproto/dproto_i386.so
 COPY --chown=steam:steam dproto/dproto.cfg cstrike/dproto.cfg
-RUN echo "linux addons/dproto/dproto_i386.so" >> cstrike/addons/metamod/plugins.ini
 
 # Add AMX_MODX and CSDM
-RUN mkdir -p cstrike/addons/amxmodx
-RUN echo "linux addons/amxmodx/dlls/amxmodx_mm_i386.so" >> cstrike/addons/metamod/plugins.ini
 COPY --chown=steam:steam amxmodx/addons/amxmodx cstrike/addons/amxmodx
 
 # Add bots
 COPY --chown=steam:steam podbot cstrike/addons/podbot
-RUN echo "linux addons/podbot/podbot_mm_i386.so" >> cstrike/addons/metamod/plugins.ini
 COPY --chown=steam:steam liblist.gam cstrike/
 
 # Copy ESL configs  
