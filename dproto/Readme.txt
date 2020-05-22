@@ -1,6 +1,20 @@
 dproto is a plugin for metamod that allows p.47 and 48 no-steam clients to join the hlds-based server.
 
-CURRENT VERSION: 0.9.548
+CURRENT VERSION: 0.9.582-p
+What's new:
+	1. Linux version is compatible with the latest 8308 version of HLDS.
+	2. Support for "Has associated Steam account"
+	3. Modify the configuration content of dproto.cfg.
+
+dproto.cfg Changelog:
+	1. All 47 protocol clients are grouped into: STEAM_ID_LAN
+	2. All clients of the 48 protocol or Steam simulator are classified into: VALVE_ID_PENDING
+	3. Clients that use sXe Injected are categorized into: VALVE_ID_LAN
+	4. Set the server query message to Hybrid mode (by default only 48 protocols can be swiped out of the server)
+	5. The dproto version number is not displayed.
+
+Since I have no source code, I can only do disassembling patches!
+	
 For more information and updates please check http://cs.rin.ru/forum/viewtopic.php?f=29&t=55986
 
 ARCHIVE CONTAINS:
@@ -16,7 +30,7 @@ REQUIREMENTS:
 
 INSTALLATION:
 	1. Go to <gamedir>/addons/ and make new directory named dproto
- 		<gamedir> - it is a game directory; cstrike for Counter-Strike, valve for Half-Life, etc
+		<gamedir> - it is a game directory; cstrike for Counter-Strike, valve for Half-Life, etc
 	2. Copy dproto.dll or dproto_i386.so to <gamedir>/addons/dproto/
 	3. Go to metamod installation directory (usually its <gamedir>/addons/metamod/) and edit plugins.ini:
 		add this line for windows
@@ -30,8 +44,8 @@ INSTALLATION:
 	
 	   when server loads, type "meta list" in console. You'll see something like this:
 		Currently loaded plugins:
-		      description      stat pend  file              vers      src   load  unlod
-		 [ 1] dproto           RUN   -    dproto_i386.so    v0.9.548    ini   Start Never
+			  description      stat pend  file              vers      src   load  unlod
+		 [ 1] dproto           RUN   -    dproto_i386.so    v0.9.582    ini   Start Never
 		 [ 2] AMX Mod X        RUN   -    amxmodx_mm_i386.  v1.8.1.3  ini   Start ANY
 		2 plugins, 2 running
 	6. If status is not "RUN", start server with "+log on +mp_logecho 1" parameters and look through console output. In 99% cases you'll find reason there.
@@ -73,7 +87,7 @@ HOW TO GET CLIENT PROTOCOL IN AMXX:
 	
 USEFUL COMMANDS/CVARS:
 	dp_ipsessions (command) - lists active connectionless sessions and info about them.
-	dp_secplrlist (command) - lists active players with some boolean options: U = Slot is used; A = Active network client; P = passed fakeplayer check;
+	dp_secplrinfo (command) - lists active players with some boolean options: U = Slot is used; A = Active network client; P = passed fakeplayer check;
 	dp_lastthreats (command) - lists last threats.
 	dp_heapinfo (command) - writes internal heap usage to <gamedir>/mem.txt.
 	dp_log_msgoverflows (cvar) - enables/disables dumping contents of messages on overflow.

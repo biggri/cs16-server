@@ -15,7 +15,7 @@ USER steam
 RUN wget -nv https://steamcdn-a.akamaihd.net/client/installer/steamcmd_linux.tar.gz && \
     tar -xvzf steamcmd_linux.tar.gz
 
-RUN /home/steam/steamcmd.sh +login anonymous +force_install_dir /home/steam/cs16 +app_update 90 validate +quit
+#RUN /home/steam/steamcmd.sh +login anonymous +force_install_dir /home/steam/cs16 +app_update 90 validate +quit
 RUN /home/steam/steamcmd.sh +login anonymous +force_install_dir /home/steam/cs16 +app_update 70 validate +quit || :
 RUN /home/steam/steamcmd.sh +login anonymous +force_install_dir /home/steam/cs16 +app_update 10 validate +quit || :
 RUN /home/steam/steamcmd.sh +login anonymous +force_install_dir /home/steam/cs16 +app_update 90 validate +quit
@@ -26,32 +26,32 @@ WORKDIR /home/steam/cs16
 
 # Add metamod
 RUN mkdir -p cstrike/addons/metamod/dlls
-COPY metamod_i386.so cstrike/addons/metamod/dlls/
-COPY metamod.so cstrike/addons/metamod/dlls/
+COPY --chown=steam:steam metamod_i386.so cstrike/addons/metamod/dlls/
+COPY --chown=steam:steam metamod.so cstrike/addons/metamod/dlls/
 
 # Add dproto
 RUN mkdir -p cstrike/addons/dproto
-COPY dproto/bin/Linux/dproto_i386.so cstrike/addons/dproto/dproto_i386.so
-COPY dproto/dproto.cfg cstrike/dproto.cfg
+COPY --chown=steam:steam dproto/bin/Linux/dproto_i386.so cstrike/addons/dproto/dproto_i386.so
+COPY --chown=steam:steam dproto/dproto.cfg cstrike/dproto.cfg
 RUN echo "linux addons/dproto/dproto_i386.so" >> cstrike/addons/metamod/plugins.ini
 
 # Add AMX_MODX and CSDM
 RUN mkdir -p cstrike/addons/amxmodx
 RUN echo "linux addons/amxmodx/dlls/amxmodx_mm_i386.so" >> cstrike/addons/metamod/plugins.ini
-COPY amxmodx/addons/amxmodx cstrike/addons/amxmodx
+COPY --chown=steam:steam amxmodx/addons/amxmodx cstrike/addons/amxmodx
 
 # Add bots
-COPY podbot cstrike/addons/podbot
-RUN echo "linux addons/podbot/podbot_mm_i386.so" > cstrike/addons/metamod/plugins.ini
-COPY liblist.gam cstrike/
+COPY --chown=steam:steam podbot cstrike/addons/podbot
+RUN echo "linux addons/podbot/podbot_mm_i386.so" >> cstrike/addons/metamod/plugins.ini
+COPY --chown=steam:steam liblist.gam cstrike/
 
 # Copy ESL configs
-COPY *.cfg cstrike/
+COPY --chown=steam:steam *.cfg cstrike/
 
 # Install aim maps
-COPY AimMapCs1.6/cstrike cstrike/
+COPY --chown=steam:steam AimMapCs1.6/cstrike cstrike/
 
 EXPOSE 27015/tcp
 EXPOSE 27015/udp
 
-CMD ./hlds_run -game cstrike -strictportbind -autoupdate -ip 0.0.0.0 +sv_lan 1 +map aim_map -maxplayers 32
+CMD ./hlds_run  -game cstrike -strictportbind -autoupdate -ip 0.0.0.0 +sv_lan 0 +map aim_map -maxplayers 32 +log on +mp_logecho 1
