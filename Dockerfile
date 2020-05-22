@@ -29,6 +29,17 @@ RUN mkdir -p cstrike/addons/metamod/dlls
 COPY metamod_i386.so cstrike/addons/metamod/dlls/
 COPY metamod.so cstrike/addons/metamod/dlls/
 
+# Add dproto
+RUN mkdir -p cstrike/addons/dproto
+COPY dproto/bin/Linux/dproto_i386.so cstrike/addons/dproto/dproto_i386.so
+COPY dproto/dproto.cfg cstrike/dproto.cfg
+RUN echo "linux addons/dproto/dproto_i386.so" >> cstrike/addons/metamod/plugins.ini
+
+# Add AMX_MODX and CSDM
+RUN mkdir -p cstrike/addons/amxmodx
+RUN echo "linux addons/amxmodx/dlls/amxmodx_mm_i386.so" >> cstrike/addons/metamod/plugins.ini
+COPY amxmodx/addons/amxmodx cstrike/addons/amxmodx
+
 # Add bots
 COPY podbot cstrike/addons/podbot
 RUN echo "linux addons/podbot/podbot_mm_i386.so" > cstrike/addons/metamod/plugins.ini
