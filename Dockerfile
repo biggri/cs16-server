@@ -1,4 +1,4 @@
-FROM debian:8
+FROM bitnami/minideb:buster
 
 RUN apt-get update -qq \
   && apt-get install -y --no-install-recommends \
