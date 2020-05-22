@@ -2,18 +2,30 @@
 
 Works on both client 47 and 48
 
+
+
+## Currently running plugins:
+
 Metamod v1.20  2013-02-16
 
-Currently running plugins:
- [  1] dproto_EF, v0.9.582, 2017-09-22, by Crock, see 
+ [  1] dproto_EF, v0.9.582, 2017-09-22, by Crock
+ 
  [  2] AMX Mod X, v1.8.2, Feb 14 2013, by AMX Mod X Dev Team, see http://www.amxmodx.org
+ 
  [  3] POD-Bot mm, vV3B22, May 10 2012, by Count Floyd & Bots United, see http://www.bots-united.com
+ 
  [  4] MySQL, v1.8.2, Feb 14 2013, by AMX Mod X Dev Team, see http://www.amxmodx.org/
+ 
  [  5] Fun, v1.8.2, Feb 14 2013, by AMX Mod X Dev Team, see http://www.amxmodx.org
+ 
  [  6] CStrike, v1.8.2, Feb 14 2013, by AMX Mod X Dev Team, see http://www.amxmodx.org
+ 
  [  7] CSX, v1.8.2, Feb 14 2013, by AMX Mod X Dev Team, see http://www.amxmodx.org/
+ 
  [  8] FakeMeta, v1.8.2, Feb 14 2013, by AMX Mod X Dev Team, see http://www.amxmodx.org
+ 
  [  9] CSDM2, v2.1.3c-KWo, Jun  2 2013, by CSDM Team, see http://www.bailopan.net/
+ 
 
 ## Example
 ```
