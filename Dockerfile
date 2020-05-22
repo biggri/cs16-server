@@ -45,7 +45,7 @@ COPY --chown=steam:steam podbot cstrike/addons/podbot
 RUN echo "linux addons/podbot/podbot_mm_i386.so" >> cstrike/addons/metamod/plugins.ini
 COPY --chown=steam:steam liblist.gam cstrike/
 
-# Copy ESL configs 
+# Copy ESL configs  
 COPY --chown=steam:steam *.cfg cstrike/
 
 # Install aim maps
