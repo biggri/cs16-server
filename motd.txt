@@ -1,9 +1,17 @@
-<p><font size="2"><font face="Courier"><font color="#FF0000">MESSAGE OF THE DAY</font><br>
+<p>
+<font size="2">
+<font face="Courier">
+<font color="#FF0000">MESSAGE OF THE DAY</font><br>
 <font color="#0000FF">Welcome to Counter-Strike 1.6<br>
 <br>
-Map Rotation For This Server:</font></font><br>
+Map Rotation For This Server:
+</font>
+</font><br>
+
 <font face="Courier"><br>
-</font></font><font size="2" face="Courier" color="#000000">
+</font>
+
+</font><font size="2" face="Courier" color="#000000">
 
 de_aztec<br>
 de_dust<br>
@@ -13,3 +21,7 @@ de_inferno<br>
 de_nuke<br>
 
 </font></p>
+
+
+This server is powered by Docker</br>
+Run yours using <a href=https://hub.docker.com/r/coquinone/counterstrike-1.6>https://hub.docker.com/r/coquinone/counterstrike-1.6</a>
