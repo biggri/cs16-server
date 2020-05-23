@@ -29,5 +29,5 @@ Metamod v1.20  2013-02-16
 
 ## Example
 ```
-docker run -d -p 27015:27015 -p 27015:27015/udp --name cs16-server -v /cs/cs16_server.cfg:/home/steam/cs16/cstrike/server.cfg coquinone/counterstrike-1.6:v2
+docker run -d -p 27015:27015 -p 27015:27015/udp --name cs16-server -v your_cs16_server.cfg:/home/steam/cs16/cstrike/server.cfg coquinone/counterstrike-1.6
 ```
