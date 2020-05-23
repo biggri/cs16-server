@@ -47,6 +47,9 @@ COPY --chown=steam:steam liblist.gam cstrike/
 # Copy ESL configs  
 COPY --chown=steam:steam *.cfg cstrike/
 
+# Copy Map rotation settings
+COPY --chown=steam:steam *.txt cstrike/
+
 # Install aim maps
 COPY --chown=steam:steam AimMapCs1.6/cstrike cstrike/
 
