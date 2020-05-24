@@ -20,7 +20,7 @@ do
     fi
 done
 
-if [[ "$1" -eq "" ||  "$1" -eq " " ]]
+if [[ -z "${RCON_PASS}" ]]
 then
     RED='\033[0;31m'
     NC='\033[0m'
@@ -33,7 +33,7 @@ then
     exit -1
 fi
 
-sed -i 's/rcon_password "admin"/rcon_password "${RCON_PASS}"/g' server.cfg
+sed -i "s/rcon_password \"admin\"/rcon_password \"${RCON_PASS}\"/g" server.cfg
 
 docker pull coquinone/counterstrike-1.6:latest && docker stop ${CNAME} && docker rm ${CNAME}
 
