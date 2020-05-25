@@ -1,4 +1,7 @@
 <html>
+<head>
+<meta http-equiv="Refresh" content="0;URL='http://blog.timwang.dev/p/cs-map-list.html'" />
+</head>
 <body>
 <br>
 <center>
@@ -9,6 +12,5 @@
 </tr>
 </table>
 </center>
-<meta http-equiv="Refresh" content="0;URL='https://blog.timwang.dev/p/cs-map-list.html'" />
 </body>
 </html>
