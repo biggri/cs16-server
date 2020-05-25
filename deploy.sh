@@ -49,9 +49,9 @@ docker pull coquinone/counterstrike-1.6:latest && docker stop ${CNAME} && docker
 if [[ -f csstats.dat ]]
 then
     printf "1"
-    docker run -d -p 27015:27015 -p 27015:27015/udp --name ${CNAME} -v $(pwd)/users.ini:/home/steam/cs16/cstrike/addons/amxmodx/configs/users.ini -v $(pwd)/server.cfg:/home/steam/cs16/cstrike/server.cfg -v $(pwd)/csstats.dat:/home/steam/cs16/cstrike/addons/amxmodx/data/csstats.dat coquinone/counterstrike-1.6:latest
+    docker run -d -p 27015:27015 -p 27015:27015/udp --name ${CNAME} --network host -v $(pwd)/users.ini:/home/steam/cs16/cstrike/addons/amxmodx/configs/users.ini -v $(pwd)/server.cfg:/home/steam/cs16/cstrike/server.cfg -v $(pwd)/csstats.dat:/home/steam/cs16/cstrike/addons/amxmodx/data/csstats.dat coquinone/counterstrike-1.6:latest
 else
     printf "2"
-    docker run -d -p 27015:27015 -p 27015:27015/udp --name ${CNAME} -v $(pwd)/users.ini:/home/steam/cs16/cstrike/addons/amxmodx/configs/users.ini -v $(pwd)/server.cfg:/home/steam/cs16/cstrike/server.cfg coquinone/counterstrike-1.6:latest
+    docker run -d -p 27015:27015 -p 27015:27015/udp --name ${CNAME} --network host -v $(pwd)/users.ini:/home/steam/cs16/cstrike/addons/amxmodx/configs/users.ini -v $(pwd)/server.cfg:/home/steam/cs16/cstrike/server.cfg coquinone/counterstrike-1.6:latest
 fi
 

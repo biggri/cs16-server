@@ -25,3 +25,6 @@ de_nuke<br>
 
 This server is powered by Docker</br>
 Run yours using <a href=https://hub.docker.com/r/coquinone/counterstrike-1.6>https://hub.docker.com/r/coquinone/counterstrike-1.6</a>
+
+<h3>Current map list</h3>
+<script src="https://gist.github.com/coquinone/bdcd1b36cb96908dbaafdfbfdc5f1ccc.js"></script>
