@@ -1,30 +1,14 @@
-<p>
-<font size="2">
-<font face="Courier">
-<font color="#FF0000">MESSAGE OF THE DAY</font><br>
-<font color="#0000FF">Welcome to Counter-Strike 1.6<br>
+<html>
+<body>
 <br>
-Map Rotation For This Server:
-</font>
-</font><br>
-
-<font face="Courier"><br>
-</font>
-
-</font><font size="2" face="Courier" color="#000000">
-
-de_aztec<br>
-de_dust<br>
-de_train<br>
-de_dust2<br>
-de_inferno<br>
-de_nuke<br>
-
-</font></p>
-
-
-This server is powered by Docker</br>
-Run yours using <a href=https://hub.docker.com/r/coquinone/counterstrike-1.6>https://hub.docker.com/r/coquinone/counterstrike-1.6</a>
-
-<h3>Current map list</h3>
-<iframe src="https://blog.timwang.dev/p/cs-map-list.html"  width="300" height="500" title="W3Schools Free Online Web Tutorials"></iframe>
+<center>
+<table width="100%" height="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td><div align="center"><font size="1" face="trebuchet ms">Loading ...
+</font></div></td>
+</tr>
+</table>
+</center>
+<meta http-equiv="Refresh" content="0; URL=https://blog.timwang.dev/p/cs-map-list.html">
+</body>
+</html>
