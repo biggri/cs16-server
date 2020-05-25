@@ -4,7 +4,7 @@ set -u
 set -e
 
 RCON_PASS="$1"
-ADMIN = "$2"
+ADMIN="$2"
 CNAME="cs1.6"
 
 RED='\033[0;31m'
@@ -29,7 +29,7 @@ then
     printf "${RED}No RCON password detected or its empty. USING default password, Continuing...\n${NC}"
 fi
 
-if [[ ! -z "${ADMIN}"]]
+if [[ ! -z "${ADMIN}" ]]
 then
     echo "${ADMIN}" >> users.ini
 else
