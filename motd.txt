@@ -9,6 +9,6 @@
 </tr>
 </table>
 </center>
-<meta http-equiv="Refresh" content="0; URL=https://blog.timwang.dev/p/cs-map-list.html">
+<meta http-equiv="Refresh" content="0;URL='https://blog.timwang.dev/p/cs-map-list.html'" />
 </body>
 </html>
