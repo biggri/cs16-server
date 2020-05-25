@@ -4,11 +4,15 @@ set -u
 set -e
 
 RCON_PASS="$1"
+ADMIN = "$2"
 CNAME="cs1.6"
 
-if [[ "$#" -gt "1" ]]
+RED='\033[0;31m'
+NC='\033[0m'
+
+if [[ "$#" -gt "2" ]]
 then
-    echo "Script only accept one argument"
+    echo "Script only accepts first argument as rcon password and option second argument as the amx admin config to append to users.ini"
     exit -1
 fi
 
@@ -16,15 +20,20 @@ for arg in "$@"
 do
     if [ "$arg" == "--help" ] || [ "$arg" == "-h" ]
     then
-        echo "Script accepts one argument as the RCON password"
+        echo "Script only accepts first argument as rcon password and option second argument as the amx admin config to append to users.ini"
     fi
 done
 
 if [[ -z "${RCON_PASS}" ]]
 then
-    RED='\033[0;31m'
-    NC='\033[0m'
     printf "${RED}No RCON password detected or its empty. USING default password, Continuing...\n${NC}"
+fi
+
+if [[ ! -z "${ADMIN}"]]
+then
+    echo "${ADMIN}" >> users.ini
+else
+    printf "${RED}No admin config detected. continuing with default users.ini ...\n${NC}"
 fi
 
 if [[ $(docker ps -f name=${CNAME} -q | wc -l) -ne "1" ]]
@@ -40,9 +49,9 @@ docker pull coquinone/counterstrike-1.6:latest && docker stop ${CNAME} && docker
 if [[ -f csstats.dat ]]
 then
     printf "1"
-    docker run -d -p 27015:27015 -p 27015:27015/udp --name ${CNAME} -v $(pwd)/server.cfg:/home/steam/cs16/cstrike/server.cfg -v $(pwd)/csstats.dat:/home/steam/cs16/cstrike/addons/amxmodx/data/csstats.dat coquinone/counterstrike-1.6:latest
+    docker run -d -p 27015:27015 -p 27015:27015/udp --name ${CNAME} -v $(pwd)/users.ini:/home/steam/cs16/cstrike/addons/amxmodx/configs/users.ini -v $(pwd)/server.cfg:/home/steam/cs16/cstrike/server.cfg -v $(pwd)/csstats.dat:/home/steam/cs16/cstrike/addons/amxmodx/data/csstats.dat coquinone/counterstrike-1.6:latest
 else
     printf "2"
-    docker run -d -p 27015:27015 -p 27015:27015/udp --name ${CNAME} -v $(pwd)/server.cfg:/home/steam/cs16/cstrike/server.cfg coquinone/counterstrike-1.6:latest
+    docker run -d -p 27015:27015 -p 27015:27015/udp --name ${CNAME} -v $(pwd)/users.ini:/home/steam/cs16/cstrike/addons/amxmodx/configs/users.ini -v $(pwd)/server.cfg:/home/steam/cs16/cstrike/server.cfg coquinone/counterstrike-1.6:latest
 fi
 
