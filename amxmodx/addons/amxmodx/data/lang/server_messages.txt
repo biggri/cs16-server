@@ -1,16 +1,12 @@
 [en]
-SERVER_MSG_1 = ------| Welcome to #hostname# |------\nTimeleft: #timeleft#\nNext map is: #nextmap#
-SERVER_MSG_2 = Say rtv or rockthevote to vote for next map from a random list of maps / 在聊天中打rtv开始投票随机换图
-SERVER_MSG_3 = Say amx_votemap mapname1 mapname2 mapname 3 to vote for any maps on the server / 在控制台中打amx_votemap 地图名称 开始换图
-SERVER_MSG_4 = Check MOTD for a full list of maps / 在MOTD中可看到服务器上所有地图
+SERVER_MSG_1 = ------| Welcome to #hostname# |------\nTimeleft: #timeleft#\nNext map is: #nextmap#\n---------------------------------------
+SERVER_MSG_2 = Say rtv or rockthevote to vote for next map from a random list of maps\nSay amx_votemap mapname1 mapname2 mapname 3 to vote for any maps on the server\nCheck MOTD for a full list of maps
+SERVER_MSG_3 = 在聊天中打rtv开始投票随机换图\n在控制台中打amx_votemap 地图名称 开始换图\n在MOTD中可看到服务器上所有地图
 
-SERVER_RULE_1 = Cheating will be result in a permanent ban.
-SERVER_RULE_2 = Personal attack and racism behaviors are not tolerated and will result in a permanent ban.
-SERVER_RULE_3 = Have Fun
+SERVER_RULE_1 = Personal attacks and racism behaviors will result in a permanent ban
 
 SERVER_INFO_1 = This server is powered by Docker
-SERVER_INFO_2 = Run yours using https://hub.docker.com/r/coquinone/counterstrike-1.6
-SERVER_INFO_3 = Source code is at https://github.com/coquinone/cs16-server
+SERVER_INFO_2 = https://hub.docker.com/r/coquinone/counterstrike-1.6
 
 SM_NO_CLIENT = None player found.
 SM_ERROR_FILE = [ERROR] File not found. (%s)
