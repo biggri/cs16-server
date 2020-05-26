@@ -1,7 +1,7 @@
 [en]
 SERVER_MSG_1 = ------| Welcome to #hostname# |------\nTimeleft: #timeleft#\nNext map is: #nextmap#
 SERVER_MSG_2 = Say rtv or rockthevote to vote for next map from a random list of maps / 在聊天中打rtv开始投票随机换图
-SERVER_MSG_3 = Say amx_votemap mapname1 mapname2 mapname 3 to vote for any maps on the server / 在聊天中打amx_votemap 地图名称 开始换图
+SERVER_MSG_3 = Say amx_votemap mapname1 mapname2 mapname 3 to vote for any maps on the server / 在控制台中打amx_votemap 地图名称 开始换图
 SERVER_MSG_4 = Check MOTD for a full list of maps / 在MOTD中可看到服务器上所有地图
 
 SERVER_RULE_1 = Cheating will be result in a permanent ban.
