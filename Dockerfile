@@ -50,6 +50,9 @@ COPY --chown=steam:steam *.cfg cstrike/
 # Copy Map rotation settings
 COPY --chown=steam:steam *.txt cstrike/
 
+# fy_iceworld fix
+COPY --chown=steam:steam de_vegas.wad cstrike/
+
 # Install aim maps
 COPY --chown=steam:steam AimMapCs1.6/cstrike cstrike/
 
