@@ -1,0 +1,55 @@
+[en]
+SERVER_MSG_1 = ------| Welcome to #hostname# |------\nTimeleft: #timeleft#\nNext map is: #nextmap#
+SERVER_MSG_2 = Say rtv or rockthevote to vote for next map from a random list of maps / 在聊天中打rtv开始投票随机换图
+SERVER_MSG_3 = Say amx_votemap mapname1 mapname2 mapname 3 to vote for any maps on the server / 在聊天中打amx_votemap 地图名称 开始换图
+SERVER_MSG_4 = Check MOTD for a full list of maps / 在MOTD中可看到服务器上所有地图
+
+SERVER_RULE_1 = Cheating will be result in a permanent ban.
+SERVER_RULE_2 = Personal attack and racism behaviors are not tolerated and will result in a permanent ban.
+SERVER_RULE_3 = Have Fun
+
+SERVER_INFO_1 = This server is powered by Docker
+SERVER_INFO_2 = Run yours using https://hub.docker.com/r/coquinone/counterstrike-1.6
+SERVER_INFO_3 = Source code is at https://github.com/coquinone/cs16-server
+
+SM_NO_CLIENT = None player found.
+SM_ERROR_FILE = [ERROR] File not found. (%s)
+SM_ERROR_SEARCH = [ERROR] Can't set the search parameter.
+SM_ERROR_NUMBER = [ERROR] Second parameter must be a number.
+SM_ERROR_MESSAGE = [ERROR] Message not found.
+SM_RULE_PREFIX = Rule %i:
+SM_START_MSG_LISTING = Server Messages
+SM_START_RULE_LISTING = Server Rules
+SM_START_INFO_LISTING = Server Informations
+SM_RESTART_THE_GAME = You should restart the game to activate\nsome new features for Counter-Strike.
+SM_CAN_NOT_READ = If you can not read the messages on the top\nright corner, you should restart the game.
+SM_PRINT_LOG = Admin %s sent a message to %s. (Message: %s, Mode %i)
+SM_CUSTOM_USAGE = Usage: amx_print_custom @ALL ''Have fun and good luck'' 4 2
+
+[de]
+SERVER_MSG_1 = Du solltest deine eigenen Nachrichten hinzuf�gen.\nSiehe in die server_messages.txt.\n(./cstrike/addons/amxmodx/data/lang/server_messages.txt)
+SERVER_MSG_2 = Du kannst mehr Nachrichten hinzuf�gen.\nBitte benutze eine fortlaufende Nummerierung.
+SERVER_MSG_3 = Benutze ''\*n'' ohne ''*'' um einen Zeilenumbruch zu erzeugen.\nHallo Welt.
+SERVER_MSG_4 = G�ltige Platzhalter:\nServername: #hostname#\nSpielername: #playername#\nN�chste Map: #nextmap#\nAktuelle Map: #currentmap#\nUhrzeit: #time#\nNoch zu spielen: #timeleft#\nSpielzeit: #playtime#
+
+SERVER_RULE_1 = Cheaten wird mit einem permanenten Bann bestarft.
+SERVER_RULE_2 = Werbung und Voicespam sind nicht erlaubt.
+SERVER_RULE_3 = Absichtliche Teamangriffe und Teamkills sind nicht erlaubt.\nDieses Benehmen wird mit einem Bann bestraft.\nDie L�nge des Bannes liegt im ermessen des Admins.
+
+SERVER_INFO_1 = Lade dir unser Soundpack herunter von\nxxx.xxxx-xxxxxxxx.xx
+SERVER_INFO_2 = Besuche unser Forum auf\nxxx.xxxx-xxxxxxxx.xx
+SERVER_INFO_3 = Schreibe ''amx_list_rule'' in die Konsole um alle Regeln zu lesen.
+
+SM_NO_CLIENT = Keinen Spieler gefunden.
+SM_ERROR_FILE = [ERROR] Datei nicht gefunden. (%s)
+SM_ERROR_SEARCH = [ERROR] Ung�ltiger Suchparameter.
+SM_ERROR_NUMBER = [ERROR] Der zweite Parameter muss eine Zahl sein.
+SM_ERROR_MESSAGE = [ERROR] Nachricht wurde nicht gefunden.
+SM_RULE_PREFIX = Regel %i:
+SM_START_MSG_LISTING = Server Nachrichten
+SM_START_RULE_LISTING = Server Reglen
+SM_START_INFO_LISTING = Server Informationen
+SM_RESTART_THE_GAME = Du solltest das Spiel neu starten, um\nneue Funktionen f�r Counter-Strike zu aktivieren.
+SM_CAN_NOT_READ = Wenn du keine Nachrichten in der oberen rechten\nEcke lesen kannst, solltest du das Spiel neu starten.
+SM_PRINT_LOG = Admin %s sendete eine Nachricht zu %s. (Message: %s, Mode %i)
+SM_CUSTOM_USAGE = Usage: amx_print_custom @ALL ''Have fun and good luck'' 4 2
