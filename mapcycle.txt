@@ -1,6 +1,10 @@
+cs_estate
+de_rats
+de_dust2_2x2
+fy_pool_day
 de_aztec
-de_dust2
 de_inferno
+de_dust2
 de_nuke
 de_train
 de_dust
@@ -18,7 +22,6 @@ awp_india
 cs_bloodstrike
 fy_iceworld
 fy_matrix
-fy_pool_day
 fy_woods
 he_dodgeball2
 aim_usp
