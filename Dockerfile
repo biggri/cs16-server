@@ -44,6 +44,9 @@ COPY --chown=steam:steam amxmodx/addons/amxmodx cstrike/addons/amxmodx
 COPY --chown=steam:steam podbot cstrike/addons/podbot
 COPY --chown=steam:steam liblist.gam cstrike/
 
+RUN mkdir cstrike/addons/plugins
+COPY --chown=steam:steam podbot30/podbotmenu cstrike/addons/plugins
+
 # Copy ESL configs  
 COPY --chown=steam:steam *.cfg cstrike/
 

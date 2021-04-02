@@ -69,8 +69,6 @@
        <li><p class="style_white"><a href="#XIX">v3.0 metamod Build 18c</a></p></li>
        <li><p class="style_white"><a href="#XX">v3.0 metamod Build 19d</a></p></li>
        <li><p class="style_white"><a href="#XXI">v3.0 metamod Build 20a</a></p></li>
-       <li><p class="style_white"><a href="#XXII">v3.0 metamod Build 21</a></p></li>
-       <li><p class="style_white"><a href="#XXIII">v3.0 metamod Build 22</a></p></li>	   
 <!-- ###END: MainContent Navigation### -->
       </ul>
 	  </td>
@@ -945,146 +943,33 @@
 		by waiting Ts). Now they are getting the path according to the "danger" data experience.<br>
 	+ FIXED - Bots were trying to get the same waypoint to camping while defending some position (for example the planted bomb).<br>
 	+ Changed - the bots are trying to hit the enemy behind the obstacle more often now (if he could be seen or heard before).<br>
-	+ Changed - the bots are not trying to spray so much the ammo for the enemy behind the wall (just a little bit and with some interval 
+	+	Changed - the bots are not trying to spray so much the ammo for the enemy behind the wall (just a little bit and with some interval 
 		time (15sec) it may happen again).<br>
 	+ Changed - Filtering the aiming position to don't switch too often the position the bot should look at.<br>
 	+ FIXED - The bot is switching now to the secondary weapon for short distances to the enemy, when is using the sniper weapon.<br>
 	+ Changed - The nade throwing - the bot checks where the enemy is looking at (if visible) to prevent to be an easy target (or throws it 
 		at near expected enemy's position - if the enemy is behind some obstacle).<br>
 	+ Changed - Some functions more frequently called are using static variables now, so it should be better optimized in execution now.<br>
-	+ FIXED problem with bots looking very often at the ceilling.<br>
-	+ Changed - Forcing CT bots stop camping and trying to defuse the bomb if the defuser got killed.<br>
-	+ Changed a bit method of checking if the entity to pickup (i.e. bomb) is visble.<br>
-	+ FIXED - bots unable to find the bomb partially visible (by Ts and CTs).<br>
-	+ Changed a bit blinded behaviour of the bot.<br>
-	+ FIXED bots trying to avoid an approching grenade didn't check if they may fall down while moving back.<br>
-	+ FIXED bots reloading the weapon didn't check if they may fall down while moving back.<br>
-	+ FIXED - the bot should answer positive for the command "Follow me" only in the case it is really going to follow its "user".<br>
-	+ Changed a bit the check for throwing grenade direction - it should prevent to throw the nade in weird directions (at least 50% reduced).<br>
-	+ FIXED - CT bots are finding better the bomb to defuse it if they are nearby.<br>
-	+ FIXED - bots weren't avoiding the nades throwing in their direction.<br>
-	+ FIXED - better affecting bots by smoke grenades and flashbangs.<br>
-	+ Changed - the bots should better aim the new WP while walking (so they should faster change the direction to go - better following waypoints).<br>
-	+ FIXED - "Taking fire, need assistance" command was issued even if the enemy wasn't fireing at the bot.<br>
-	+ FIXED - the bots shaking and circling effect (reduced 99%).<br>
-	+ FIXED - the bots strafing while doing attack movement.<br>
+	+	FIXED problem with bots looking very often at the ceilling.<br>
+	+	Changed - Forcing CT bots stop camping and trying to defuse the bomb if the defuser got killed.<br>
+	+	Changed a bit method of checking if the entity to pickup (i.e. bomb) is visble.<br>
+	+	FIXED - bots unable to find the bomb partially visible (by Ts and CTs).<br>
+	+	Changed a bit blinded behaviour of the bot.<br>
+	+	FIXED bots trying to avoid an approching grenade didn't check if they may fall down while moving back.<br>
+	+	FIXED bots reloading the weapon didn't check if they may fall down while moving back.<br>
+	+	FIXED - the bot should answer positive for the command "Follow me" only in the case it is really going to follow its "user".<br>
+	+	Changed a bit the check for throwing grenade direction - it should prevent to throw the nade in weird directions (at least 50% reduced).<br>
+	+	FIXED - CT bots are finding better the bomb to defuse it if they are nearby.<br>
+	+	FIXED - bots weren't avoiding the nades throwing in their direction.<br>
+	+	FIXED - better affecting bots by smoke grenades and flashbangs.<br>
+	+	Changed - the bots should better aim the new WP while walking (so they should faster change the direction to go - better following waypoints).<br>
+	+	FIXED - "Taking fire, need assistance" command was issued even if the enemy wasn't fireing at the bot.<br>
+	+	FIXED - the bots shaking and circling effect (reduced 99%).<br>
+	+	FIXED - the bots strafing while doing attack movement.<br>
 	+ FIXED the calculation of the path's length according to the "danger" data experience.<br>
 	+ FIXED the problem with spinning bot while throwing nades.<br>
-	</span></li>
-	
-  <li><a name="XXII"></a>V 3.0 metamod Build 21
-  <span>
-	+ FIXED - problem with CT bots not defusing the bomb sometimes (no anyone nearby and they didn't defuse).<br>
-	+ FIXED - problem with usage of buttons triggering double door (consisting left and right part like on cs_chemical).<br>
-	+ Changed - aiming for moving targets.<br>
-	+ Optimized the code for lookup enemies - it should reduce the CPU usage about 30%.<br>
-	+ Changed - optimized the code for unstuck bots (especially when the bot is stuck with other bots/players).<br>
-	+ Changed - finding \\\"BestWaypoint\\\" for navigation (if the new WP in path is used by another bot/player, the bot will take 
-	another WP connected with the previous and next WP only if the next is visible from the prevoius one 
-	- that check was prevoiously missing).<br>
-	+ Reverted back - the check if the heard/last enemy is far away behind any obstacle (to prevent look the bots at the wall).<br>
-	+ Added - if the bot follows waypoints while walking according to the path and it has to change the direction more than 60 degrees (if it would 
-	continue exactly the same direction - the angle would be 0 degrees) and waypoints radius is smaller than 17 then the bot slows down for 0.5 sec 
-	and then it continues normal walking. That should prevent the situation when - i.e. - the bot changes the direction 90 degrees and it hits the wall 
-	instead the door.<br>
-	+ FIXED - problem with bots looking wrong direction at walking (in most cases they should look forward, but it may happen they are also 
-	looking at danger position - which isn't forward). That should reduce their looking at the wall.<br>
-	+ FIXED - problem with not updating the global experience if the overflow of experience data was about to happen.<br>
-	+ Reverted back some function in sound slimulation (the sample of the sound is now also taken in account for 1.2 sec instead of 1 sec; 
-	the new sample is taken into account if the new sample's volume is higher than the old one).<br>
-	+ Added - "pb help" function (i.e. You can write in the console "pb help add" to see more info about "pb add" command. 
-	That function was missing since the time SpLoRyGoN was coding podbot mm; he haven't had time to do it, but he really wanted it.<br>
-	+ FIXED - the code for cleaning unnecessary connections - it should take care more about any waypoint with JUMP flag, so You shouldn't need 
-	to repeat Your jumps to save them again because the code was cleaning some jumps connections, too.<br>
-	+ Changed - the functionality of pb_latencybot cvar. Now when You set it to 2, it starts to show virtual random ping for bots 
-	(it gets random from 30-50 range value).<br>
-	+ Added new function when the bot is falling down at least half a second, it should press "use" button (to support parachute AMX/AMXX plugins). 
-	It works only if sv_parachute cvar exists and it is set to 1.<br>
-	+ Added - when the first player joins a Ts or CTs team on the server and there are bots only, the round is restarted in 1 second.<br>
-	+ Removed the check for dead players if the user is with NOCLIP movement flag.<br>
-	+ FIXED - the problem with radio commands - when the cvar pb_radio is 0, bots should still react on radio messages (they just don't answer 
-	by radio).<br>
-	+ FIXED - the problem with hostages staying above a bot (i.e. on a box), the hostage wasn't "used" by a bot. That should also help with defusing 
-	a bomb on a box.<br>
-	+ FIXED - the problem with fast direction change when the bot is moving and no enemy around (they should rotate now more smoothly).<br>
-	+ FIXED - the problem with chat messages not filling the string with a name of the player the message is related to.<br>
-	+ FIXED - the problem with chat messages parsing players names with a space (i.e. if the player had a name "James Bond" in the message string 
-	it was only "James").<br>
-	+ Changed the delay time bots would answer to chat messages (that should prevent bots to overflood the chat area).<br>
-	+ Changed the chat usage - the bots should chat less often (they shouldn't spam the chat area).<br>
-	+ FIXED - "shoot at death time" is working now as it should (when the bot kills an enemy, he is still trying to shoot at the same direction 
-	for a random period - 0.3-1.0sec).<br>
-	+ FIXED - the problem with bots neverending trying to break some unbreakable obstacle (after short time that unbreakable obstacle gets 
-	ignored by a bot now).<br>
-	+ FIXED other things concerning to shaking bots.<br>
-	+ Changed time of displaying the message about PWF creator (12 seconds after the new round is started after the player joined the server.<br>
-	+ Changed time of displaying the welcome message (15 seconds after the new round is started after the player joined the server.<br>
-	+ FIXED the problem with bots switching the weapon to the knife in the middle of reloading the weapon.<br>
-	+ FIXED the problem with bots sometimes not hearing the enemy even if he was really close to them.<br>
-	+ FIXED the problem with bots not trying to seek the cover while reloading the weapon.<br>
-	+ Changed the selection of task ENEMYHUNT and SEEKCOVER.<br>
-	+ FIXED bug with pushing away bots on the edge of the roof - they shouldn't fall down now.<br>
-	+ FIXED bug with pushing away bots in smaller areas.<br>
-	+ Cleaned the code (exactly some functions are splitted to let the coder easier find a specific code).<br>
-	+ FIXED bug with bots throwing nades in some random places.<br>
-	+ FIXED bug with bots looking at the wall for longer time.<br>
-	+ FIXED the problem with bots not trying to switch to secondary weapon in short distances (if they are using snipers i.e.).<br>
-	+ FIXED the bug with bots not shooting to enemies farer away than 4096 units.<br>
-	+ Reduced again bots shaking problem.<br>
-	+ FIXED the bug with bots not overjumping obstacles while they are stuck.<br>
-	+ FIXED the bug with bots jumping after spawning.<br>
-	+ Changed - bots shouldn't camp if they have a shotgun or m241.<br>
-	+ Added 1 new command (exactly old command with new argument) for waypointers:<br>
-		pb wp teleport goal - teleports the waypointer to the next waypoint with the flag GOAL.<br>
-	+ Changed the default value of pb_dangerfactor from 800 to 2000 (it may affect the server performance on an older PC).<br>
-	+ Changed - bots are buying weapons on an aim_xxx and awp_xxx maps, too, if info_map_parameters allows that.<br>
-	</span></li>
 
-	<li><a name="XXIII"></a>V 3.0 metamod Build 22
-  <span>
-	+ Added the code to prevent bots looking up or down for no reason.<br>
-    + Added the new cvar - pb_firsthumanrestart (0 stops the function added in V3B21 - when the first human joins the server 
-	and there are some bots already playing there - the round is restarted). Now this function is off by default. 
-    You can switch it to on by changing the value from 0 to 1.<br>
-    + Added code to let the bot reload the weapon at round end (if the bot doesn't see any enemy that time).<br>
-    + FIXED - the vip bot shouldn't hunt the enemy anymore.<br>
-    + FIXED max clip for tmp (now is 30 like it should be).<br>
-    + Added code to prevent bots loose too much ammo while shooting at the wall (they should fire at the wall less now).<br>
-    + Changed - when the bomb is planted, CTs shouldn't be so much scarried now (so they shouldn't overuse the task seekcover) 
-	- thus they are more hurry in defusing the bomb.<br>
-    + Added more info to the log file about saving (or not) pxp and pvi files.<br>
-    + Added - bots are buying also the secondary weapon now (especially when they have a sniper or a shield).<br>
-    + FIXED bots are hunting the teamnate when he was attacking him - now the TA revenge takes only 1.5 sec after TA 
-	(the bot gives some damage only instead fire until kill the team attacker).<br>
-    + FIXED team specific waypoint are now really team specific (before it was fixed for offensive and deffensive goals, 
-	now bots should really take care about their team specific waypoints).<br>
-    + FIXED planting and defusing the bomb problem (bots sometimes were stopping to plant / defuse the bomb when they have seen 
-	an enemy, but they didn't switch to better weapon to fire at the enemy).<br>
-    + FIXED infinitely switching the weapon between the sniper and the pistol.<br>
-    + FIXED chicken and zombie bots camping (now they will no longer camp - except they need to hide because of low health).<br>
-    + FIXED invisibility not working for an invisible player using a knife.<br>
-    + FIXED problem reported by mhanor (bots with the skill lower than 100 shouldn't infinitively get their crosshair to the 
-	hell when the enemy is no longer visible). That should help a bit also with bots looking up and shooting into the sky.<br> 
-    + FIXED another bug with bots looking at the sky for no reason.<br>
-    + FIXED problem with a bot shaking when its enemy is hiding behind an obstacle.<br>
-    + FIXED problem with bot getting stuck with each other (because of wrong initialisation of model (thanks to IMMORTAL_BLG).<br>
-    + FIXED bug with executing task spraying logo while debuggoal index has been set to something different than -1 (bots should 
-	get that WP as its goal - spraying logo task wasn't working in that case).<br>
-    + FIXED problem with breakable - bots sometimes didn't break the breakable obstacle in its path (the code to unstuck was 
-	starting too early in some cases - before checking if there is a breakable blocking the way of the bot).<br>
-    + FIXED bug with bots spraying ammo too much at the wall/obstacle (now they do it much less).<br>
-    + FIXED bug with bots looking at the sky while planting the bomb.<br>
-    + FIXED bug concerning to bots buying nightgogles if it's unnessesary.<br>
-    + IMPROVED bots aiming at moving targets.<br>
-    + FIXED bug with bots not switching to the "normal" weapon while planting the bomb when they can see the enemy (to do - 
-	exclude the situation if the best bot's weapon is a knife - i.e. if the clip of primary or secondary weapon is empty - 
-	switching to the knife while planting the bomb helps nothing).<br>
-    + FIXED bug with bots looking sometimes in stupid directions (i.e. at the wall instead at any open surface) while camping 
-	after planting the bomb or camping at other WP without a camp flag. Now they should choose a better camping direction in such
-	situations.<br>
-    + FIXED bug with "meta unload" function (thanks to IMMORTAL_BLG).<br>
-    + FIXED problem with not working darkness checking by bots on linux servers (thanks to IMMORTAL_BLG). Now - because of the 
-	new code - bots are using flashlights (and also nvg) also on linux servers.<br>
+	</span></li>
 
 <!-- ###END: MainContent### -->
       </ul>
